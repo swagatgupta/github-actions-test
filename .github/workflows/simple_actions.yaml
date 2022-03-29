@@ -1,0 +1,15 @@
+name: Actions Workflow
+on: [push]
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: multiline script
+        run: |
+          whoami
+          pwd
+          ls -ltr
+      - name: checkout commit
+        uses: actions/checkout@v3
+      - name: list after checkout
+        run : ls -ltr
