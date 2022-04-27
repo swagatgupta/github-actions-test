@@ -9,6 +9,6 @@ jobs:
         with:
           who-to-greet: 'Swagata'
       - name: echo JS Action Output
-        run: echo Welcome at ${{ steps.greet.outputs.time }}
+        run: echo "Welcome at ${{ steps.greet.outputs.time }}"
 
       
