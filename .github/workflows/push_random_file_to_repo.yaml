@@ -18,7 +18,7 @@ jobs:
       
       - name: push-file-to-repo
         run: |
-          echo ${{ github.repository }}
+          echo https://${{ github.repository }}
       
 
     
