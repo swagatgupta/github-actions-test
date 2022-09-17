@@ -21,7 +21,7 @@ jobs:
           echo https://${{ github.token }}/${{ github.repository }}
           git add sample.txt
           git commit -m "added random file to repo"
-          git push https://${{ github.token }}/${{ github.repository }}
+          git push https://${{ secrets.GITHUB_TOKEN }}/${{ github.repository }}
       
 
     
