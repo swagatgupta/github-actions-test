@@ -18,7 +18,7 @@ jobs:
       
       - name: push-file-to-repo
         run: |
-          echo '${{ https://github.token@github.com/github.repository.git }}'
+          echo 'https://${{ github.token }}@github.com/${{ github.repository }}.git'
           # git add sample.txt
           # git commit -m "add random file"
           # git push ${{ https://github.token@github.com/<GITHUB_USERNAME>/<REPOSITORY_NAME>.git }}
