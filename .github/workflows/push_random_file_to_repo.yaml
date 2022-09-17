@@ -1,0 +1,21 @@
+name: push-random-file-to-repo
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  push-to-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout-repo
+        uses: actions/checkout@v3
+        
+      - name: generate-random-file
+        run: |
+          dd if=/dev/urandom of=sample.txt bs=1M count=1
+          ls -ltr
+
+    
+    
+  
