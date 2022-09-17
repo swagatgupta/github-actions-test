@@ -18,7 +18,8 @@ jobs:
       
       - name: push-file-to-repo
         run: |
-          echo https://${{ github.token }}/${{ github.repository }}
+          echo ${{ https://github.token/github.repository }}
+          # echo https://${{ github.token }}/${{ github.repository }}
       
 
     
