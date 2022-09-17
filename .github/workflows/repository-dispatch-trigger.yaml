@@ -1,0 +1,12 @@
+name: test_repository_dispatch
+on: 
+  repository_dispatch:
+    types: on-demand-test
+jobs:
+  test_job:
+    if: ${{ github.event.client_payload.integration }}
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          MESSAGE: ${{ github.event.client_payload.message }}
+        run: echo $MESSAGE
