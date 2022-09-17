@@ -14,11 +14,14 @@ jobs:
       - name: generate-random-file
         run: |
           dd if=/dev/urandom of=sample.txt bs=1M count=1
-          ls -ltr
+          ls -latr
+          pwd
       
       - name: push-file-to-repo
         run: |
           echo https://$GITHUB_ACTOR:${{ github.token }}/${{ github.repository }}.git
+          git config user.email "swagatlinkedin@gmail.com"
+          git config user.name "swagatgupta"
           git add sample.txt
           git commit -m "added random file to repo"
           git push https://$GITHUB_ACTOR:${{ github.token }}/$GITHUB_REPOSITORY.git
