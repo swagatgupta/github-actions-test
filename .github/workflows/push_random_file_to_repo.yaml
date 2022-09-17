@@ -19,12 +19,12 @@ jobs:
       
       - name: push-file-to-repo
         run: |
-          echo https://$GITHUB_ACTOR:${{ github.token }}/${{ github.repository }}.git
+          echo https://$GITHUB_ACTOR:${{ github.token }}/@github.com/${{ github.repository }}.git
           git config user.email "swagatlinkedin@gmail.com"
           git config user.name "swagatgupta"
           git add sample.txt
           git commit -m "added random file to repo"
-          git push https://$GITHUB_ACTOR:${{ github.token }}/$GITHUB_REPOSITORY.git
+          git push https://$GITHUB_ACTOR:${{ github.token }}@github.com/$GITHUB_REPOSITORY.git
       
 
     
