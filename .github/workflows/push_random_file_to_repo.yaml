@@ -10,11 +10,19 @@ jobs:
     steps:
       - name: checkout-repo
         uses: actions/checkout@v3
-        
+
       - name: generate-random-file
         run: |
           dd if=/dev/urandom of=sample.txt bs=1M count=1
           ls -ltr
+      
+      - name: push-file-to-repo
+        run: |
+          echo ${{ https://github.token@github.com/github.repository.git }}
+          # git add sample.txt
+          # git commit -m "add random file"
+          # git push ${{ https://github.token@github.com/<GITHUB_USERNAME>/<REPOSITORY_NAME>.git }}
+      
 
     
     
